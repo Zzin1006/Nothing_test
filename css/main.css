@@ -1,0 +1,372 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Noto+Sans+KR:wght@100;700&display=swap');
+
+
+/* reset */
+* {padding:0; margin: 0; border: 0; box-sizing: 0; list-style: none;}
+
+html,body,div,span, applet,object,iframe,h1,h2,h3,h4,
+h5, h6,p, blockquote, pre, a, abbr, acronym, address, big,
+cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl,dt, dd, ol,ul, li, fieldset, form, label,legend, table,
+tbody, tfoot, thead, tr, th, td { padding: 0; margin: 0;}
+
+h1,h2,h3,h4,h5,h6 {font-weight: 700; font-size: inherit;}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'ACM', 'Noto Sans KR';
+    font-weight: 400;
+    letter-spacing: 0.035em;
+    background: #fafaf8;
+    color: #1a1a1a;
+    word-break: keep-all;
+    /* text가 contents밖으로 overflow됐을 때 줄을 안바꾸고 계속 keep-all*/
+}
+
+.wrap {width: 100%; overflow: hidden;}
+
+
+/* HEADER */
+
+header {
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    background: transparent;
+    padding: 20px 0;
+    color: rgb(0, 0, 0);
+    font-family: 'Noto Sans KR';
+    text-align: center;
+    text-transform: uppercase;
+}
+/* 
+header:hover {
+    background: rgba(0,0,0,0.4);
+    transition: 0.4s;
+} */
+
+header .inner {
+    width: 90%;
+    margin: 0 auto;
+    color: #fafaf8;
+}
+
+
+header .inner .gnbBtn {
+    display:block;
+    float: left;
+    width: 34px;;
+    height: 15px;
+    position: relative;
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+
+header .inner .gnbBtn span{
+   position: absolute;
+   background: #fafaf8;
+   width: 100%;
+   height: 2px;
+   left: 0;
+}
+
+
+
+header .inner .gnbBtn span.a{
+    top:0;
+}
+
+
+header .inner .gnbBtn span.b{
+    top:50%;
+    transform: translateY(-50%);
+}
+
+
+header .inner .gnbBtn span.c{
+    bottom:0;
+}
+
+
+header .inner .logo {
+    display:inline-block;
+    cursor: pointer;
+}
+
+
+
+
+header .inner .login {
+    display: block;
+    float: right;
+    font-size: 13px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+/* gnb */
+nav.gnb {
+    position: absolute;
+    left:-1000px;
+    top:0;
+    background: rgba(0,0,0,0.4);
+    color: #bbb;
+    width: 400px;
+    height: 100vh;
+    padding: 95px 50px;
+    box-sizing: border-box;
+    text-align: left;
+    transition: all 0.7s;
+    overflow: hidden;
+}
+
+nav.gnb ul {
+    position: absolute;
+    width: 60%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+nav.gnb ul a {
+    text-align: left;
+    line-height: 40px;
+    font-size: 18px;
+}
+
+nav.gnb ul a span {
+    text-transform: capitalize;
+    font-family: 'Noto Sans KR';
+}
+
+
+nav.gnb ul a span:hover {
+    color: #fff;
+    transition: all 0.3s ease-in;
+}
+
+/* header.on붙을 때 gnb 디자인 */
+header.on nav.gnb {
+    width: 200px;
+    transition: all 0.4s;
+}
+
+header.on nav.gnb ul {
+    width: 50%;
+}
+
+/* gnb.on붙을 때 */
+nav.gnb.on {
+    width: 400px;
+    left:0;
+}
+
+
+/* CONTENTS */
+
+.contents {
+    background: #fff;
+}
+
+
+.contents .main_img {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+
+.contents .main_img .main{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    left:0;
+    top:0;
+}
+
+
+.contents .main_img .title{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    font-family: 'ACM';
+    color: #fff;
+    font-size: 80px;
+    text-shadow: 0 0 25px rgba(0,0,0,0.3);
+
+}
+
+
+
+/* section.about */
+section.about {
+    background: #f2f0eb;
+    padding: 100px 0;
+}
+
+section.about .inner {
+    width: 1400px;
+    margin:0 auto;
+}
+
+section.about .inner .text {}
+
+
+section.about .inner .text .title{
+    font-family: 'Noto Sans KR';
+    font-size: 14px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 5px;
+}
+
+
+section.about .inner .text p {
+    font-size: 17px;
+    line-height: 1.4;
+}
+
+
+
+section.about .inner .text p {
+    font-size: 17px;
+}
+
+
+section.about .inner .text p {
+    font-size: 17px;
+}
+
+
+section.about .inner .text a {
+    display: inline-block;
+    padding: 5px 0px;
+    /* border: 1px solid #333;
+    border-radius: 20px; */
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: all 0.8s;
+    margin-top: 20px;
+    float: right;
+}
+
+
+
+section.about .inner .text a:hover {
+    border-bottom: 1px solid #333;
+    padding: 5px 15px;
+}
+
+
+
+/* modal */
+#contact_modal {
+    display:none;
+    /* 만들 때는 block처리 */
+    position: fixed;
+    z-index: 101;
+    /* header z-index가 100이어서 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* overflow: auto; */
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    text-align: center;
+    overflow: hidden;
+}
+
+
+
+
+#contact_modal > .close {
+    display: block;
+    text-align: right;
+    color: #bbb;
+    font-size: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+    padding: 50px;
+}
+
+
+
+#contact_modal > .close:hover,
+#contact_modal > .close:focus {
+    color: #f1f1f1;
+}
+
+
+
+#contact_modal > .container {
+    position: relative;
+    width: 70%;
+    height: 700px;
+    background: #f2f0eb;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+#contact_modal > .container > img {
+    position: absolute;
+    width: 30%;
+    display: block;
+    float: left;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+#contact_modal > .container > .modal-Text {
+    padding: 20px;
+    text-align: right;
+    position: absolute;
+    width: 70%;
+    float: right;
+    top: 50%;
+    right: 0%;
+    transform: translateY(-50%);
+    font-family: 'Noto Sans KR';
+    line-height: 1.5;
+    letter-spacing: 1.4px;
+    font-size: 16px;
+}
+
+
+/* footer-area */
+
+.footer-area {
+    width: 90%;
+    margin: 0 auto;
+    font-family: 'Noto Sans KR';
+    padding: 15px 10px;
+    height: auto;
+    background-color: transparent;
+    text-align: right;
+    font-size: 12px;
+}
+
+
+/*반응형 웹*/
+/* 1400px */
+@media screen and ( max-width:1400px) {
+    section.about .inner {
+        width: 90%;
+    }
+}
